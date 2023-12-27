@@ -1,0 +1,39 @@
+<div class="table-container">
+
+    <h1 class="text-4xl font-extrabold text-gray-800">Points Table</h1>
+  
+    <table class="table rounded-lg shadow-lg">
+  
+      <thead>
+  
+        <tr>
+  
+          <th *ngFor="let heading of tableHeading">{{ heading }}</th>
+  
+        </tr>
+  
+      </thead>
+  
+      <tbody>
+  
+        <tr *ngFor="let team of pointTable; let teamIndex = index"
+            [ngClass]="{
+              'bg-green-200': teamIndex <= 4,
+              'bg-red-400': teamIndex > 4
+            }"
+            (mouseenter)="onMouseEnter()"
+            (mouseleave)="onMouseLeave()"
+            style="cursor: pointer;">
+  
+          <ng-container *ngIf="teamIndex > 0">
+            <td *ngFor="let data of team">{{ data }}</td>
+          </ng-container>
+  
+        </tr>
+  
+      </tbody>
+  
+    </table>
+  
+  </div>
+  

@@ -1,0 +1,21 @@
+<header class="bg-gradient-to-r from-purple-400 to-pink-600 p-4">
+  <div class="container mx-auto flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="#" class="text-white text-lg font-bold">
+      Bharadwaj CricketInfo
+    </a>
+
+    <!-- Navigation Menus -->
+    <nav class="flex items-center space-x-4 ml-auto">
+      <a [routerLink]="'/home'" class="text-white cursor-pointer">Home</a>
+      <a [routerLink]="'/live'" class="text-white cursor-pointer">Live</a>
+      <a [routerLink]="'/history'" class="text-white cursor-pointer">History</a>
+      <a [routerLink]="'/point-table'" class="text-white cursor-pointer"
+        >Points</a
+      >
+    </nav>
+  </div>
+</header>
+<div class="px-28 py-4">
+  <router-outlet></router-outlet>
+</div>
